@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+
+        {% block content %}
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="menu-header">
+        <h1 class="menu-title">Hamsafar</h1>
+        <a href="{% url 'list_u' %}" class="menu-link">User</a>
+        <a href="{% url 'list_o' %}" class="menu-link">Trip</a>
+        <a href="{% url 'list_m' %}" class="menu-link">Companion Request</a>
+        <a href="{% url 'logout' %}" class="menu-link">Logout</a> 
+
+    </div>
+
+<div class="menu-content">
+    <div class="menu-description">
+        <h2 class="welcome">Welcome to Our Hamsafar</h2>
+        <p>This platform allows you to manage and track all your essential tasks with ease. Whether you're organizing team projects or monitoring employee performance, our tools are designed to improve your productivity and streamline operations.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h3 class="footer-title">Thank You for Choosing Us</h3>
+    <p class="footer-info">Explore all our features and enjoy the benefits of a well-organized workspace. If you need assistance, don't hesitate to reach out. We're here to help!</p>
+</div>
+{% endblock content %}
+
+</body>
+</html>

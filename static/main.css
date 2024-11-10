@@ -1,0 +1,106 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Menu Header */
+.menu-header {
+    background-color: #5b9bd5;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #1f4e79;
+}
+
+.menu-title {
+    color: #ffffff;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+
+/* User Section Link with Hover Effect */
+.menu-link {
+    display: inline-block;
+    color: #f9d342;
+    font-size: 1.4em;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #33334d;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #f9d342;
+    color: #33334d;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+/* Menu Content */
+.menu-content {
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.menu-content:hover {
+    transform: translateY(-5px);
+}
+
+.welcome {
+    color: #5b9bd5;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.menu-description p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid #1f4e79;
+}
+
+.footer-title {
+    color: #4caf50;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.footer-info {
+    color: #333;
+    font-size: 1em;
+    padding-top: 10px;
+}

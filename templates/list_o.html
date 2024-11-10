@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'main1.css' %}">
+</head>
+<body>
+
+    <div class="a1">
+        <h1>Trip</h1>
+        <div class="base">
+        <a href="{% url 'base' %}"><h3 class="sas">Home</h3></a>
+        <a href="{% url 'create_o' %}"><h3 class="sas">Add</h3></a>
+    </div>
+    </div>
+
+
+<div class="b1">
+        <table>
+            <caption> <h3>Trip</h1> </caption>
+            <tr>
+                <th>Image</th>
+                <th>User</th>
+                <th>Start location</th>
+                <th>End location</th>
+                <th>Date</th>
+                <th>Detail</th>
+
+            </tr>
+        {% for o in object_list %}
+        <tr>
+            <td style="width: 25%;">
+                <img style="width: 50%;" src="{{ o.image.url }}" alt="{{ o.name }}">
+            </td>
+            <td>{{ o.user }}</td>
+            <td>{{ o.start_location }}</td>
+            <td>{{ o.end_location }}</td>
+            <td>{{ o.date }}</td>
+        <td><a href="{% url 'detail_o' o.id %}">Get</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+        </div>
+<br><br><br>
+
+    </head>
+    <body>
